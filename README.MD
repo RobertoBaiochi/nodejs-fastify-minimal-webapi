@@ -1,81 +1,85 @@
 <div align="center">
 
-  <img src="./.github/assets/blue-saiyan-bg.png" alt="Logo" height="200">
-  <h1 align="center"><strong>NODE BOILERPLATE - BLUE EDITION</strong></h1>
+  <h1 align="center"><strong>Fórmula 1 Minimal API</strong></h1>
   <p align="center">
-	  Don't start a new Node project from zero!<br> Use this simple <b>Nodejs</b> boilerplate with pre-configured <b>Typescript</b> in a modern way.
+	  Estudo do conceito de Minimal API utilizando o framework Fastify 
   </p>
 
 </div>
 
 <br />
 
-  <!-- Badges -->
-<div align="center">
-  
-  [![TypeScript version][ts-badge]][typescript-5-4]
-  [![Node.js version][nodejs-badge]][nodejs]
+# 🚀 Tecnologias
 
-</div>
+Este código-fonte foi desenvolvido com os seguintes itens
 
-# 🚀 Technologies
+### 📦 Dependências
 
-This code source was developed with the following items:
+### Dependências de Produção
 
-### 📦 Dependencies
+-   [`@fastify/cors`](https://www.npmjs.com/package/@fastify/cors) : Middleware para habilitar CORS (Cross-Origin Resource Sharing) em aplicações Fastify.
+-   [`fastify`](https://www.npmjs.com/package/fastify): Framework web rápido e de baixo overhead para Node.js, otimizado para performance.
 
-- [typescript][typescript-npm] - Superset for application scale JavaScript development
-- [tsx][tsx-npm] - TypeScript Execute (tsx): Enable Node.js to run TypeScript
-- [tsup][tsup-npm] - Bundle your TypeScript library with no config, powered by esbuild
-- [@types/node][@types/node-npm] - type definitions for node
+### Dependências de Desenvolvimento
 
-### 📄 Files
+-   [`@types/node`](https://www.npmjs.com/package/@types/node): Tipos TypeScript para Node.js, permitindo o uso de tipagem estática e autocompletar.
 
-- `.gitignore` - Ignore folders like node_modules
-- `.env` - Enviroment variables
-- `tsconfig.json` - Typescript configure Options
+-   [`tsup`](https://www.npmjs.com/package/tsup): Empacotador TypeScript que gera bundles otimizados para produção.
+
+-   [`tsx`](https://www.npmjs.com/package/tsx): Ferramenta para execução de arquivos TypeScript diretamente, sem necessidade de compilação prévia.
+
+-   [`typescript`](https://www.npmjs.com/package/typescript): Superset de JavaScript que adiciona tipagem estática opcional, ideal para desenvolvimento de grandes aplicações.
+
+# 👨‍💻 Executando o Projeto
+
+Primeiro, faça o download das dependências:
+
+```sh
+npm install
+```
+
+**Iniciando o Servidor:**
+Agora inicie o servidor de desenvolvimento:
+
+```sh
+npm run start:dev
+```
+
+Para monitoramento automático de alterações durante o desenvolvimento, use:
+
+```sh
+npm run start:watch
+```
 
 ### ⚡ Scripts
 
-- `npm run dist`: Compiles TypeScript files to JavaScript in the dist directory.
-- `npm run start:dev`: Runs the server in development mode with environment variables loaded from the .env file.
-- `npm run start:watch`: Runs the server in development mode with support for automatic reload on file changes.
-- `npm run start:dist`: Compiles the project and runs the compiled version from the dist directory.
+-   **Compilar o projeto:**
+    `sh
+npm run dist
+`
+    Este comando compila os arquivos TypeScript na pasta `src` para JavaScript utilizando o `tsup`.
+    <br>
 
-# 👨‍💻 How To Use
+-   **Iniciar o servidor em ambiente de desenvolvimento:**
 
-click in **[Use this template]** OR
+    ```sh
+    npm run start:dev
+    ```
 
-To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js v20+](https://nodejs.org/en/) + [NPM v10+](https://nodejs.org/en/) installed on your computer. From your command line:
+    Este comando inicia o servidor utilizando o `tsx` e carrega as variáveis de ambiente do arquivo `.env`.
+    <br>
 
-```bash
-# Clone this repository
-$ git clone https://github.com/felipeAguiarCode/node-blue-boilerplate
+-   **Iniciar o servidor em ambiente de desenvolvimento com monitoramento de alterações:**
 
-# Go into the repository
-$ cd node-blue-boilerplate
+    ```sh
+    npm run start:watch
+    ```
 
-# Install dependencies
-$ npm install
-```
+    Este comando inicia o servidor em modo watch, reiniciando automaticamente ao detectar alterações nos arquivos, utilizando o `tsx` e carregando as variáveis de ambiente do arquivo `.env`.
+    <br>
 
-## Author
-
-| [<img src="https://avatars3.githubusercontent.com/u/37452836?s=96&v=4"><br><sub>Felipe Aguiar</sub>](https://github.com/felipeAguiarCode) |
-| :---------------------------------------------------------------------------------------------------------------------------------------: |
-|                                            [Linkedin](www.linkedin.com/in/felipe-aguiar-exe/)                                             |
-
-# Credits
-
-icons by [Pino Lamanna][dribble-icon]
-
-[typescript]: https://www.typescriptlang.org/
-[typescript-5-4]: https://www.typescriptlang.org/
-[ts-badge]: https://img.shields.io/badge/TypeScript-5.4-blue.svg
-[nodejs-badge]: https://img.shields.io/badge/Node.js->=%2020.00-blue.svg
-[nodejs]: https://nodejs.org/
-[dribble-icon]: https://dribbble.com/Schakalwal
-[typescript-npm]: https://www.npmjs.com/package/typescript
-[tsx-npm]: https://www.npmjs.com/package/tsx
-[tsup-npm]: https://www.npmjs.com/package/tsup
-[@types/node-npm]: https://www.npmjs.com/package/@types/node
+-   **Compilar e iniciar o servidor a partir dos arquivos compilados:**
+    ```sh
+    npm run start:dist
+    ```
+    Este comando compila os arquivos TypeScript e em seguida inicia o servidor a partir dos arquivos compilados na pasta `dist`.
